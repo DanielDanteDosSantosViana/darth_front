@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Darth Vader - Monitor</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/shop-item.css" rel="stylesheet">
+
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <!-- Aplicação -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- Apresentacao -->
+   <script type="text/javascript" src="js/file/controller/file_ctrl.js"></script>
+   <script type="text/javascript" src="js/file/model/file.js"></script>
+   <!-- Service -->
+   <script type="text/javascript" src="js/file/service/fileservice.js"></script>
+
+</head>
+
+<body ng-app="darth">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Darth vader</a>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Diretórios</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">success</a>
+                    <a href="#" class="list-group-item">output</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+              <div class="row">
+                  <div ng-view="" data-autoscroll="true"></div>
+              </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

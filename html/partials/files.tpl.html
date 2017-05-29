@@ -1,0 +1,32 @@
+<div ng-controller ="FilePresenter" class="well">
+
+  <div class="form-group pull-right">
+      <input type="text" class="search form-control" placeholder="O que você procura ?">
+  </div>
+    <table class="table table-inverse">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Qtd faturas</th>
+          <th>Valor faturas</th>
+          <th>Data geração</th>
+          <th>Banco</th>
+          <th>Sequencial</th>
+        </tr>
+      </thead>
+      <tbody>
+      <div ng-repeat="file in files">
+        <tr>
+          <th scope="row">{{$index}}</th>
+          <td>{{file.nome}}</td>
+          <td>{{file.status.total}}</td>
+          <td>{{file.status.value}}</td>
+          <td>{{file.status.dataReceiver}}</td>
+          <td>{{file.bank}}</td>
+          <td>{{file.sequencial}}</td>
+        </tr>
+      </div>
+     </tbody>
+    </table>
+</div>
