@@ -9,19 +9,33 @@ angular.module("DarthController").controller("FilePresenter", [
         {
 
           if ($scope.directory==undefined){
-            $scope.directory = "success"
+            $scope.directory = "todos"
           }
 
-          FileService.files(
-              function(files)
-              {
-                  $scope.files = files;
-              },
-              function(data) {
-                  $scope.response = data;
-              },
-               $scope.directory
-           );
+          if ($scope.directory == "todos"){
+            FileService.allfiles(
+                function(files)
+                {
+                    $scope.files = files;
+                },
+                function(data) {
+                    $scope.response = data;
+                },
+                 $scope.directory
+             );
+          }else{
+            FileService.files(
+                function(files)
+                {
+                    $scope.files = files;
+                },
+                function(data) {
+                    $scope.response = data;
+                },
+                 $scope.directory
+             );
+
+          }
         };
 
         //construtor

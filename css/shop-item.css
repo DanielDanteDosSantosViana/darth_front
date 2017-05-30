@@ -39,10 +39,13 @@ footer {
 .list-group-item.active {
   background-color: #080808;
 }
-.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
-  background-color: #080808;
-
+.list-group-item.active:focus, .list-group-item.active:hover{
+  background-color: #f5f5f5;
+  color: #555;
+  text-decoration: none;
+  background-color: #f5f5f5;
 }
+
 .lead{
   color: #fff;
 
