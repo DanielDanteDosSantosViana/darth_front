@@ -16,5 +16,10 @@ app.config(function($routeProvider){
         templateUrl:'/html/partials/files.tpl.html',
       });
 
+  $routeProvider.when('/list/:directory',
+      {
+        templateUrl:'/html/partials/files.tpl.html',
+      });
+
  $routeProvider.otherwise({redirectTo:'/404'});
 });

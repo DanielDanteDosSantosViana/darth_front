@@ -7,6 +7,11 @@ angular.module("DarthController").controller("FilePresenter", [
 
         var buscarFile = function()
         {
+
+          if ($scope.directory==undefined){
+            $scope.directory = "success"
+          }
+
           FileService.files(
               function(files)
               {
@@ -14,12 +19,14 @@ angular.module("DarthController").controller("FilePresenter", [
               },
               function(data) {
                   $scope.response = data;
-              }
+              },
+               $scope.directory
            );
         };
 
         //construtor
         {
+            $scope.directory = $routeParams.directory;
             buscarFile();
         };
     }

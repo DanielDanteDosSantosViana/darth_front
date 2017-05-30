@@ -16,8 +16,7 @@
         </tr>
       </thead>
       <tbody>
-      <div ng-repeat="file in files">
-        <tr>
+        <tr ng-repeat="file in files">
           <th scope="row">{{$index}}</th>
           <td>{{file.nome}}</td>
           <td>{{file.status.total}}</td>
@@ -26,7 +25,6 @@
           <td>{{file.bank}}</td>
           <td>{{file.sequencial}}</td>
         </tr>
-      </div>
      </tbody>
     </table>
 </div>

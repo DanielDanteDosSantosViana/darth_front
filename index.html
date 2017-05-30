@@ -26,7 +26,9 @@
    <script type="text/javascript" src="js/file/model/file.js"></script>
    <!-- Service -->
    <script type="text/javascript" src="js/file/service/fileservice.js"></script>
-
+   <!-- Module -->
+   <script type="text/javascript" src="js/file/model/file.js"></script>
+   <script type="text/javascript" src="js/file/model/status.js"></script>
 </head>
 
 <body ng-app="darth">
@@ -57,8 +59,8 @@
             <div class="col-md-3">
                 <p class="lead">Diretórios</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item active">success</a>
-                    <a href="#" class="list-group-item">output</a>
+                    <a ng-href="#!/list/success" class="list-group-item active">success</a>
+                    <a ng-href="#!/list/output" class="list-group-item">output</a>
                 </div>
             </div>
 
@@ -71,6 +73,11 @@
         </div>
 
     </div>
+    <script>
+   $( ".list-group list-group-item" ).click(function() {
+   $( this ).toggleClass( "active" );
+   });
+</script>
     <!-- /.container -->
 
     <!-- /.container -->
